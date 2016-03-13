@@ -1,0 +1,47 @@
+<App Theme="Basic">
+
+	<Panel ux:Class="Dropdown" ux:Name="self" Text="{title}"
+       Fill="#1976D2" TextColor="#000" CornerRadius="10">
+
+       <!-- PROPERTIES OF THE CLASS -->
+	    <string ux:Property="Text"/>
+	    <float4 ux:Property="CornerRadius" />
+	    <Brush ux:Property="Fill" />
+	    <float4 ux:Property="TextColor"/>
+	    <Text Alignment="Center" TextColor="{Property self.TextColor}" Value="{Property self.Text}"/>
+	    <Rectangle Layer="Background" CornerRadius="{Property self.CornerRadius}" Fill="{Property self.Fill}" />
+
+
+	    <!-- JAVASCRIPT -->
+	    <JavaScript>
+	    var Observable = require("FuseJS/Observable");
+
+	    var isOpen = Observable(false);
+	    var title = Observable("Title");
+
+	    module.exports = {
+	    	isOpen: isOpen,
+	    	title: title
+	    }
+
+	    </JavaScript>
+
+
+
+	    <!-- METHODS -->
+	    <Clicked>
+	    	<EvaluateJS>
+	    		if (isOpen.value == true){
+	    			isOpen.value = false;
+	    		} else {
+	    		isOpen.value = true;
+	    		}
+	    	</EvaluateJS>
+	    </Clicked>
+
+	</Panel>
+
+	<Dropdown Height="40" />
+
+</App>
+
