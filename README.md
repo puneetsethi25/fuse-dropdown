@@ -1,4 +1,28 @@
-# fuse-dropdown
+<h1>fuse-dropdown</h1>
 an attempt at making a little dropdown ui component for fuse to use in my app
 
 So I've just quickly adapted the dropdown example from the repo that I forked this from. Played around with it so it's functional as much as it needs to be now.
+
+<h2>How To Use It</h2>
+<p>Put the ux file in your project and to use it just put</p> 
+```<DropdownMenu />```
+<p>To select the options that you want you need to create an Observable called dropdownOptions:</p>
+```var dropdownOptions = Observable({name: "item1"},{name: "item2"});```
+<p>Then you need a</p> 
+```var selected = Observable();```
+<p>which contains the current option, so for example if you need to send this selected data off in a httprequest you can just use</p> 
+
+```
+selected.value
+```
+
+<p>You also need a selectMe function that takes an argument (the choice the user selects) and changes the selected option:</p>
+```
+function selectMe(arg) {
+        selected.value = arg.data.name;
+      }
+```
+
+<p>Other than that all you need is to export these functions and variables and you are good to go!<p>
+      
+  
