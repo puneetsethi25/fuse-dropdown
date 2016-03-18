@@ -8,21 +8,10 @@ So I've just quickly adapted the dropdown example from the repo that I forked th
 ```<DropdownMenu />```
 <p>To select the options that you want you need to create an Observable called dropdownOptions:</p>
 ```var dropdownOptions = Observable({name: "item1"},{name: "item2"});```
-<p>Then you need a</p> 
-```var selected = Observable();```
-<p>which contains the current option, so for example if you need to send this selected data off in a httprequest you can just use</p> 
-
+<p>To get the value of the selected item you can use</p>
 ```
 selected.value
 ```
-
-<p>You also need a selectMe function that takes an argument (the choice the user selects) and changes the selected option:</p>
-```
-function selectMe(arg) {
-        selected.value = arg.data.name;
-      }
-```
-
-<p>Other than that all you need is to export these functions and variables and you are good to go!<p>
+<p>That's the basics, if you need anything please email me or inbox me</p>
       
   
