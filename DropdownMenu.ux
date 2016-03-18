@@ -1,34 +1,22 @@
 
-
-<!--JavaScript>
-	var Observable = require("FuseJS/Observable");
-
-	
-	var dropdownOptions = Observable(
-		{ name: "Red"} ,
-		{ name: "Green"} ,
-		{ name: "Blue"} ,
-		{ name: "Yellow"} ,
-		{ name: "Teal"} ,
-		{ name: "Magenta"}
-	);
-
-	var selected = Observable();
-
-	function selectMe(arg){
-		selected.value = arg.data.name;
-		
-	}
-
-	module.exports = {
-		dropdownOptions: dropdownOptions,
-		selected: selected,
-		selectMe: selectMe,
-		
-	}
-
-</JavaScript-->
 <Panel ux:Class="DropdownMenu">
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+
+		var selected = Observable();
+
+		function selectMe(arg){
+			selected.value = arg.data.name;
+			
+		}
+
+		module.exports = {
+			selected: selected,
+			selectMe: selectMe,
+			
+		}
+
+	</JavaScript>
 
 	<Panel ux:Class="DropdownOption" ux:Name="self" Height="30">
 		<string ux:Property="Text" />
@@ -70,5 +58,4 @@
 		</WhileTrue>
 	</Panel>
 </Panel>
-<!--DropdownMenu/-->	
 
