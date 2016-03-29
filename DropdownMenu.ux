@@ -51,7 +51,7 @@
 
 		<WhileTrue ux:Name="expandDropdown">
 			<StackPanel Offset="0,40">
-				<Each Items="{dropdownOptions}">
+				<Each Items="{Property this.Items}">
 					<DropdownOption Text="{name}" Clicked="{selectMe}" />
 				</Each>
 			</StackPanel>
