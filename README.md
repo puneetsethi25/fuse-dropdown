@@ -5,8 +5,8 @@ So I've just quickly adapted the dropdown example from the repo that I forked th
 
 <h2>How To Use It</h2>
 <p>Put the ux file in your project and to use it just put</p> 
-```<DropdownMenu />```
-<p>To select the options that you want you need to create an Observable called dropdownOptions:</p>
+```<DropdownMenu Items="{your items observable}" />```
+<p>To select the options that you want you need to create an Observable with the name that you referenced to the List property earlier:</p>
 ```var dropdownOptions = Observable({name: "item1"},{name: "item2"});```
 <p>To get the value of the selected item you can use</p>
 ```
