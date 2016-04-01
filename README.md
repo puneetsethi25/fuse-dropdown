@@ -1,5 +1,5 @@
 # fuse-dropdown
-an attempt at making a little dropdown ui component for fuse to use in my app
+an attempt at making a little dropdown ui component for fuse
 
 <h1>How To Use:</h1>
 Download the DropdownMenu.ux file and place it into your project. Then reference the class in your app by doing this:
