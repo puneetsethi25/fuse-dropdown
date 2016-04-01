@@ -1,17 +1,16 @@
-<h1>fuse-dropdown</h1>
+# fuse-dropdown
 an attempt at making a little dropdown ui component for fuse to use in my app
 
-So I've just quickly adapted the dropdown example from the repo that I forked this from. Played around with it so it's functional as much as it needs to be now.
+<h1>How To Use:</h1>
+Download the DropdownMenu.ux file and place it into your project. Then reference the class in your app by doing this:
+```
+<DropdownMenu ListItems="{your list of items}" />
+```
+<p>That's the bare minimum.</p>
+To customize it you have currently 4 options:
+<p>- Background color of the panels: BackgroundColor="#FBFBFB"</p>
+<p>- Border color of the panels: BorderColor="#000000"</p>
+<p>- Color of the text: TextColor="#00F"</p>
+<p>- Size of the text: FontSize="14"</p>
 
-<h2>How To Use It</h2>
-<p>Put the ux file in your project and to use it just put</p> 
-```<DropdownMenu ListItems="{your items observable}" />```
-<p>To select the options that you want you need to create an Observable with the name that you referenced to the List property earlier:</p>
-```var dropdownOptions = Observable({name: "item1"},{name: "item2"});```
-<p>To get the value of the selected item you can use</p>
-```
-selected.value
-```
-<p>That's the basics, if you need anything please email me or inbox me</p>
-      
-  
+<h4>Hope you enjoy using this and please leave feedback, requests and anything else you might want to say. Thanks :)</h4>
